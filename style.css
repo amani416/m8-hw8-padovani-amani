@@ -102,6 +102,11 @@ section.hero > button {
   cursor: pointer;
 }
 
+button:hover{
+  background-color: yellow;
+  transform: translateY(-4px);
+}
+
 main article {
   padding: 48px 96px;
 }
