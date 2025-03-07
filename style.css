@@ -102,7 +102,7 @@ section.hero > button {
   cursor: pointer;
 }
 
-button:hover{
+section.hero > button:hover{
   background-color: yellow;
   transform: translateY(-4px);
 }
