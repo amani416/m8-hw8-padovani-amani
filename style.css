@@ -81,7 +81,7 @@ main a:hover {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-1px) scale(1.05);
+    transform: translateY(-2px) scale(1.05);
   }
   100% {
     transform: translateY(0);
