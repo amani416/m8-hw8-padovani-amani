@@ -39,8 +39,25 @@ header {
 header a {
   font-size: 1.5rem;
   color: var(--off-white);
+  text-decoration: none;
+  position: relative;
 }
 /* end header link animations */
+
+header a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 3px;
+  background-color: var(--off-white); /* Underline color */
+  transition: width 0.3s ease-in-out;
+}
+
+header a:hover::after {
+  width: 100%;
+}
 
 /* article link transitions */
 main a {
@@ -105,16 +122,16 @@ section.hero > button {
 
 section.hero > button:hover{
   background-color: yellow;
-  transform: translateY(-4px);
+  transform: translateY(-4px) scale(1.1);
   animation: pulse 1s infinite alternate;
 }
 
 @keyframes pulse {
   0% {
-    transform: scale(1);
+    transform: translateY(-4px) scale(1);
   }
   100% {
-    transform: scale(1.1);
+    transform: translateY(-4px) scale(1.1);
   }
 }
 
