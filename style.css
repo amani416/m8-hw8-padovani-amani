@@ -51,7 +51,7 @@ header a::after {
   bottom: -4px;
   width: 0%;
   height: 3px;
-  background-color: var(--off-white); /* Underline color */
+  background-color: grey; 
   transition: width 0.3s ease-in-out;
 }
 
@@ -62,8 +62,31 @@ header a:hover::after {
 /* article link transitions */
 main a {
   color: var(--danger-color);
+  text-decoration: none;
+  position: relative;
+  padding: 2px 4px;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 /* end article link transitions */
+
+main a:hover {
+  background-color: lightblue; 
+  color: black; 
+  border-radius: 4px; 
+  animation: colorPop 0.3s ease-in-out;
+}
+
+@keyframes colorPop {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-1px) scale(1.05);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 
 main > article, nav{
   max-width: 1200px;
@@ -142,7 +165,7 @@ main article {
 
 main p {
   line-height: 1.75;
-  margin-bottom: 48px;;
+  margin-bottom: 48px;
 }
 
 main > article img {
